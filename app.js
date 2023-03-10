@@ -96,6 +96,8 @@ function cointFlipper(val) {
     } else {
         game.streak = 0;
         game.score--;
+        let myAudio = new Audio("https://notification-sounds.com/1154-wrong-answer-sound-effect.html")
+        myAudio.play();
         message.textContent = `Wrong!!! you picked ${val} !!! it was ${result}`
     }
     addScore();
